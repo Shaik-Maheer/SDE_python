@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: geospatial-measurement-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATA_DIR
+        value: /data
+    disk:
+      name: geospatial-data
+      mountPath: /data
+      sizeGB: 1
