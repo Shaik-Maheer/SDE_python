@@ -3,6 +3,8 @@
 A production-minded FastAPI service that accepts KML files or zipped Shapefiles, extracts their
 features, and calculates metric area and length with correct CRS handling.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Shaik-Maheer/SDE_python)
+
 ## Highlights
 
 - KML and zipped Shapefile (`.shp`, `.shx`, `.dbf`) uploads
