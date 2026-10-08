@@ -156,9 +156,10 @@ uncompressed size, missing components, and multiple `.shp` files before extracti
 ## Deployment
 
 The repository includes a `Dockerfile` and `render.yaml`. On Render, create a Blueprint from the
-repository; the health check and persistent `/data` disk are configured automatically. The same
-image works on Fly.io, Railway, ECS, or any container host with a persistent volume mounted at
-`/data`.
+repository; the included free demo stores data on the instance's ephemeral filesystem, so data may
+reset when the service restarts. For durable production storage, select a paid persistent disk
+mounted at `/data` and set `DATA_DIR=/data`, or migrate the repository layer to PostgreSQL/PostGIS.
+The same image also works on Fly.io, Railway, ECS, or any container host with a persistent volume.
 
 ## Learning and future scope
 

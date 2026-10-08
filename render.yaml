@@ -6,8 +6,4 @@ services:
     healthCheckPath: /health
     envVars:
       - key: DATA_DIR
-        value: /data
-    disk:
-      name: geospatial-data
-      mountPath: /data
-      sizeGB: 1
+        value: /tmp/geospatial-data
